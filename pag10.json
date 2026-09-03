@@ -1,0 +1,252 @@
+[
+  {
+    "nombre": "Aceite Belmont vegetal con canola 1 L",
+    "precio": 2550,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165719/000000000000004933-UN-01.jpg?v=638960495673130000"
+  },
+  {
+    "nombre": "Aceite Chef maravilla 0% colesterol 1 L",
+    "precio": 2990,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166353/Aceite-maravilla-0--colesterol.jpg?v=638960495314430000"
+  },
+  {
+    "nombre": "Arroz Banquete premium G1 1 Kg",
+    "precio": 2230,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166379/000000000000006106-UN-01.jpg?v=638960520266670000"
+  },
+  {
+    "nombre": "Arroz G2 largo",
+    "precio": 1760,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165778/000000000000006129-UN.png?v=638960521477900000"
+  },
+  {
+    "nombre": "Arroz Miraflores G1 largo ancho bolsa 1 Kg",
+    "precio": 1790,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166348/000000000000006105-UN-01.jpg?v=638960482689500000"
+  },
+  {
+    "nombre": "Arroz Miraflores G2 largo ancho 1 Kg",
+    "precio": 1970,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/156007/Arroz-g2-largo-ancho.jpg?v=638960521404930000"
+  },
+  {
+    "nombre": "Arroz Tucapel gran selección G1 1 Kg",
+    "precio": 1990,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166382/000000000000006107-UN-01.jpg?v=638960521153470000"
+  },
+  {
+    "nombre": "Arroz Tucapel gran selección G2 1 Kg",
+    "precio": 1450,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166385/000000000000006126-UN-01.jpg?v=638960521308730000"
+  },
+  {
+    "nombre": "Arroz Tucapel pregraneado 1 Kg",
+    "precio": 2190,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/158461/000000000000006143-UN-01.jpg?v=637871936686000000"
+  },
+  {
+    "nombre": "Azúcar blanca Iansa 5 Kg",
+    "precio": 7490,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165725/000000000000005242-UN-01.jpg?v=638960510180600000"
+  },
+  {
+    "nombre": "Base Maggi pescado frito sobre 85 g",
+    "precio": 770,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166350/000000000000004909-UN-01.jpg?v=638960494831330000"
+  },
+  {
+    "nombre": "Frijoles bayos refritos",
+    "precio": 3080,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159493/000000000000652695-UN-01.jpg?v=638367137488630000"
+  },
+  {
+    "nombre": "Frijoles negros enteros",
+    "precio": 2570,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159494/000000000000652696-UN-01.jpg?v=638367137496930000"
+  },
+  {
+    "nombre": "Harina Mont Blanc con polvos 1 Kg",
+    "precio": 990,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166371/000000000000005963-UN-01.jpg?v=638960519654730000"
+  },
+  {
+    "nombre": "Harina Mont Blanc sin polvo 5 Kg",
+    "precio": 5790,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166377/000000000000005966-UN-01.jpg?v=638960520158600000"
+  },
+  {
+    "nombre": "Harina Mont Blanc sin polvos 1 Kg",
+    "precio": 990,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166373/000000000000005964-UN-01.jpg?v=638960519880670000"
+  },
+  {
+    "nombre": "Harina Mont Blanc sin polvos 3 Kg",
+    "precio": 3440,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166375/000000000000005965-UN-01.jpg?v=638960520079670000"
+  },
+  {
+    "nombre": "Harina Nuestra Cocina con polvos 1 Kg",
+    "precio": 980,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166721/000000000000652511-UN-01.jpg?v=638991605299230000"
+  },
+  {
+    "nombre": "Harina Nuestra Cocina sin polvos 1 Kg",
+    "precio": 980,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166720/000000000000652510-UN-01.jpg?v=638991604640000000"
+  },
+  {
+    "nombre": "Harina Selecta con polvos 1 Kg",
+    "precio": 1390,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165753/000000000000005960-UN-01.jpg?v=638960518061700000"
+  },
+  {
+    "nombre": "Harina Selecta sin polvos 1 Kg",
+    "precio": 1390,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166369/000000000000005959-UN-01.jpg?v=638960517964100000"
+  },
+  {
+    "nombre": "Harina Selecta sin polvos 3 Kg",
+    "precio": 3390,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165755/000000000000005961-UN-01.jpg?v=638960519532230000"
+  },
+  {
+    "nombre": "Ketchup JB sachet 100 g",
+    "precio": 480,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165726/000000000000005256-UN-01.jpg?v=638960510260370000"
+  },
+  {
+    "nombre": "Lasaña tradicional Carozzi caja 400 g",
+    "precio": 2410,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/167450/000000000000006438-UN-01.jpg?v=639053121131170000"
+  },
+  {
+    "nombre": "Mayonesa bolsa",
+    "precio": 1050,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165723/000000000000005054-UN-01.jpg?v=638960510025130000"
+  },
+  {
+    "nombre": "Pack duraznos Nuestra Cocina en cubitos 4 un de 113 g neto - 65 g drenado",
+    "precio": 2210,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159633/000000000651724002-UN-01.jpg?v=637922043630070000"
+  },
+  {
+    "nombre": "Pasta Espirales Nuestra Cocina 400 g",
+    "precio": 700,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159625/000000000650822005-UN-01.jpg?v=638887903259830000"
+  },
+  {
+    "nombre": "Pasta fettuccine N°88 Carozzi 400 g",
+    "precio": 730,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165792/000000000000006449-UN-01.jpg?v=638960523511630000"
+  },
+  {
+    "nombre": "Pasta Quífaros",
+    "precio": 700,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159624/000000000650822004-UN-01.jpg?v=638887911521400000"
+  },
+  {
+    "nombre": "Pasta quifaros Carozzi 400 g",
+    "precio": 730,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165790/000000000000006446-UN-01.jpg?v=638960523439400000"
+  },
+  {
+    "nombre": "Pasta spaghetti N° 5 Carozzi 400 g",
+    "precio": 730,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166391/000000000000006442-UN-01.jpg?v=638960523264500000"
+  },
+  {
+    "nombre": "Pasta Spaghetti N°5",
+    "precio": 700,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159622/000000000650822001-UN-01.jpg?v=638887911518000000"
+  },
+  {
+    "nombre": "Pasta Tallarines 77",
+    "precio": 700,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159623/000000000650822002-UN-01.jpg?v=638887903242930000"
+  },
+  {
+    "nombre": "Pasta tallarines N° 87 Carozzi 400 g",
+    "precio": 730,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165788/000000000000006444-UN-01.jpg?v=638960523345200000"
+  },
+  {
+    "nombre": "Puré instantáneo",
+    "precio": 15050,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159741/000000000000654237-UN-01.jpg?v=637932530971200000"
+  },
+  {
+    "nombre": "Sal fina Lobos salero 125 g",
+    "precio": 540,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166365/000000000000005760-UN-01.jpg?v=638960511137900000"
+  },
+  {
+    "nombre": "Sal fina Lobos salero 250 g",
+    "precio": 690,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166359/000000000000005753-UN-01.jpg?v=638960510742800000"
+  },
+  {
+    "nombre": "Sal fina Lobos salero 500 g",
+    "precio": 1310,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/155994/Sal-fina-salero.jpg?v=638960527107700000"
+  },
+  {
+    "nombre": "Sal fina Lobos yodada bolsa 1 Kg",
+    "precio": 470,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165738/000000000000005756-UN-01.jpg?v=638960510830770000"
+  },
+  {
+    "nombre": "Sal gruesa cocina Lobos bolsa 1 Kg",
+    "precio": 470,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166361/000000000000005757-UN-01.jpg?v=638960510932330000"
+  },
+  {
+    "nombre": "Sal parrillera Lobos 750 g",
+    "precio": 1430,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166363/000000000000005758-UN-01.jpg?v=638960511045800000"
+  },
+  {
+    "nombre": "Salsa de tomate italiana",
+    "precio": 2480,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159630/000000000651325002-UN-01.jpg?v=637922021414330000"
+  },
+  {
+    "nombre": "Salsa de tomate Nuestra Cocina con carne 200 g",
+    "precio": 600,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159626/000000000650963001-UN-01.jpg?v=637922017715870000"
+  },
+  {
+    "nombre": "Salsa de tomate Nuestra Cocina italiana 200 g",
+    "precio": 600,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159627/000000000650963002-UN-01.jpg?v=637922018094230000"
+  },
+  {
+    "nombre": "Salsa de tomate Nuestra Cocina natural 200 g",
+    "precio": 600,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159628/000000000650963003-UN-01.jpg?v=637922018541530000"
+  },
+  {
+    "nombre": "Salsa deshidratada Maggi blanca sobre 36 g",
+    "precio": 770,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/164768/000000000000004901-UN-01.jpg?v=638863887974870000"
+  },
+  {
+    "nombre": "Sucedáneo jugo de limón",
+    "precio": 5350,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159496/000000000000652705-UN-01.jpg?v=637920545101270000"
+  },
+  {
+    "nombre": "Sucedáneo jugo de limón Traverso 1 L",
+    "precio": 1790,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/167971/000000000000005724-UN-01.jpg?v=639123076686530000"
+  },
+  {
+    "nombre": "Sucedáneo jugo limón de pica Traverso 500 ml",
+    "precio": 1680,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/167972/000000000000005761-UN-01.jpg?v=639123076981170000"
+  },
+  {
+    "nombre": "Vinagre vino rosado Traverso 500 ml",
+    "precio": 840,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159254/000000000000005779-UN-01.jpg?v=637903023303930000"
+  }
+]

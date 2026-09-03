@@ -1,0 +1,232 @@
+[
+  {
+    "nombre": "Azúcar blanca Iansa 1 Kg",
+    "precio": 1420,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/164276/000000000000007518-UN-01.jpg.jpg?v=638796525992600000"
+  },
+  {
+    "nombre": "Azúcar flor Iansa 500 g",
+    "precio": 1190,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165856/000000000000007605-UN-01.jpg?v=638960530042930000"
+  },
+  {
+    "nombre": "Azúcar rubia Iansa 500 g",
+    "precio": 1300,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165854/000000000000007515-UN-01.jpg?v=638960526734230000"
+  },
+  {
+    "nombre": "Café Cruzeiro Clásico instantáneo lata 170 g",
+    "precio": 5930,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166425/000000000000010511-UN-01.jpg?v=638960532302930000"
+  },
+  {
+    "nombre": "Café instantáneo Monterrey clásico lata 170 g",
+    "precio": 5390,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/156058/Cafe-instantaneo-clasico-lata.jpg?v=638960537165970000"
+  },
+  {
+    "nombre": "Café Monterrey clásico lata 50 g",
+    "precio": 2160,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/156056/Cafe-clasico-lata.jpg?v=638960537066670000"
+  },
+  {
+    "nombre": "Café Nescafé Dolca lata 170 g",
+    "precio": 5650,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/168198/000000000000010524-UN-01.jpg?v=639144591761070000"
+  },
+  {
+    "nombre": "Café Nescafé tradición lata 50 g",
+    "precio": 2890,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/168183/000000000000010517-UN-01.jpg?v=639144590658870000"
+  },
+  {
+    "nombre": "Cereal Natur arroz inflado bolsa 20 g",
+    "precio": 250,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166413/000000000000007087-UN-01.jpg?v=638960526656300000"
+  },
+  {
+    "nombre": "Choritos Nuestra Cocina en aceite lata 190 g neto - 100 g drenado",
+    "precio": 1210,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/167903/000000000652258001-UN-01.jpg?v=639110812368300000"
+  },
+  {
+    "nombre": "Choritos Nuestra Cocina en aceite lata 425 g neto - 213 g drenado",
+    "precio": 2390,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/167908/000000000652259002-UN-01.jpg?v=639110821647800000"
+  },
+  {
+    "nombre": "Choritos Nuestra Cocina en agua lata 190 g neto - 100 g drenado",
+    "precio": 1210,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/167904/000000000652258002-UN-01.jpg?v=639110813691670000"
+  },
+  {
+    "nombre": "Choritos Nuestra Cocina en agua lata 425 g neto - 213 g drenado",
+    "precio": 2390,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/167907/000000000652259001-UN-01.jpg?v=639110818985500000"
+  },
+  {
+    "nombre": "Duraznos Aconcagua en mitades lata 820 g neto - 480 g drenado",
+    "precio": 2440,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/164551/000000000000009640-UN-01.jpg?v=638838741750670000"
+  },
+  {
+    "nombre": "Pasta cabello de ángel Carozzi corto 400 g",
+    "precio": 730,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165794/000000000000006451-UN-01.jpg?v=638960523696330000"
+  },
+  {
+    "nombre": "Pasta cabellos de ángel Lucchetti 400 g",
+    "precio": 690,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/160800/000000000000006528-UN-01.jpg?v=638205423271530000"
+  },
+  {
+    "nombre": "Pasta canutos Lucchetti 400 g",
+    "precio": 690,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/160797/000000000000006518-UN-01.jpg?v=638205410182230000"
+  },
+  {
+    "nombre": "Pasta codos Parma 400 g",
+    "precio": 650,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/158468/000000000000006557-UN-01.jpg?v=637872180221100000"
+  },
+  {
+    "nombre": "Pasta corbatas Carozzi 400 g",
+    "precio": 730,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166398/000000000000006459-UN-01.jpg?v=638960524750630000"
+  },
+  {
+    "nombre": "Pasta corbatas Lucchetti 400 g",
+    "precio": 690,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166401/000000000000006516-UN-01.jpg?v=638960525646670000"
+  },
+  {
+    "nombre": "Pasta corbatitas Lucchetti 400 g",
+    "precio": 690,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165815/000000000000006517-UN-01.jpg?v=638960525730200000"
+  },
+  {
+    "nombre": "Pasta espirales al huevo Talliani 400 g",
+    "precio": 1230,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/160812/000000000000006490-UN-01.jpg?v=638205540215930000"
+  },
+  {
+    "nombre": "Pasta espirales Carozzi 400 g",
+    "precio": 730,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166396/000000000000006457-UN-01.jpg?v=638960523991970000"
+  },
+  {
+    "nombre": "Pasta espirales Lucchetti 400 g",
+    "precio": 690,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/160798/000000000000006519-UN-01.jpg?v=638205411857500000"
+  },
+  {
+    "nombre": "Pasta espirales Parma 400 g",
+    "precio": 650,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165833/000000000000006558-UN-01.jpg?v=638960526496570000"
+  },
+  {
+    "nombre": "Pasta farfalle al huevo Talliani 400 g",
+    "precio": 1230,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/160811/000000000000006495-UN-01.jpg?v=638205539827430000"
+  },
+  {
+    "nombre": "Pasta mariposas Carozzi 250 g",
+    "precio": 760,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165805/000000000000006466-UN-01.jpg?v=638960524823900000"
+  },
+  {
+    "nombre": "Pasta mariposas Lucchetti 250 g",
+    "precio": 400,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166410/000000000000006542-UN-01.jpg?v=638960526312870000"
+  },
+  {
+    "nombre": "Pasta mostaccioli Carozzi 400 g",
+    "precio": 730,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165796/000000000000006455-UN-01.jpg?v=638960523780900000"
+  },
+  {
+    "nombre": "Pasta mostaccioli Lucchetti 400 g",
+    "precio": 690,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165812/000000000000006514-UN-01.jpg?v=638960525018570000"
+  },
+  {
+    "nombre": "Pasta rigatoni Carozzi 400 g",
+    "precio": 730,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166394/000000000000006456-UN-01.jpg?v=638960523886570000"
+  },
+  {
+    "nombre": "Pasta spaghetti N° 5 Lucchetti 400 g",
+    "precio": 690,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/160801/000000000000006531-UN-01.jpg?v=638205424850600000"
+  },
+  {
+    "nombre": "Pasta spaghetti N° 5 Talliani al huevo 400 g",
+    "precio": 1230,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/160809/000000000000006486-UN-01.jpg?v=638205457924330000"
+  },
+  {
+    "nombre": "Pasta spaguetti N°5 Parma 400 g",
+    "precio": 650,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/156041/Pasta-spaguetti-n°5.jpg?v=638960526401270000"
+  },
+  {
+    "nombre": "Pasta tallarines N°78 Lucchetti 400 g",
+    "precio": 690,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166407/000000000000006532-UN-01.jpg?v=638960526176200000"
+  },
+  {
+    "nombre": "Pasta tallarines Nº 77 Lucchetti 400 g",
+    "precio": 690,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166404/000000000000006526-UN-01.jpg?v=638960525904230000"
+  },
+  {
+    "nombre": "Piña Esmeralda en rodajas 822 g neto - 425 g drenado",
+    "precio": 2770,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/168116/000000000000009671-UN-01.jpg?v=639137653439500000"
+  },
+  {
+    "nombre": "Piñas Esmeralda en rodajas lata 567 g neto - 340 g drenado",
+    "precio": 1950,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/168117/000000000000009674-UN-01.jpg?v=639137655163170000"
+  },
+  {
+    "nombre": "Surtido de marisco Nuestra Cocina en aceite 190 g neto - 100 g drenado",
+    "precio": 1670,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/167905/000000000656680001-UN-01.jpg?v=639110816238770000"
+  },
+  {
+    "nombre": "Surtido de marisco Nuestra Cocina en agua 425 g neto - 213 g drenado",
+    "precio": 2890,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/167910/000000000656679001-UN-01.jpg?v=639110824193570000"
+  },
+  {
+    "nombre": "Surtido de mariscos en aceite",
+    "precio": 2890,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/167909/000000000656679002-UN-01.jpg?v=639110824008370000"
+  },
+  {
+    "nombre": "Surtido de mariscos en agua",
+    "precio": 1670,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/167906/000000000656680002-UN-01.jpg?v=639110817691530000"
+  },
+  {
+    "nombre": "Té ceylán oro",
+    "precio": 810,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/165910/000000000000010584-UN-01.jpg?v=638960537624830000"
+  },
+  {
+    "nombre": "Té la rendidora",
+    "precio": 700,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/156059/Te-la-rendidora.jpg?v=638960537246300000"
+  },
+  {
+    "nombre": "Vinagre vino blanco Nuestra Cocina 5 L",
+    "precio": 4870,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159651/000000000652861002-UN-01.jpg?v=637922063385370000"
+  },
+  {
+    "nombre": "Vinagre vino tinto Nuestra Cocina 5 L",
+    "precio": 4870,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/159650/000000000652861001-UN-01.jpg?v=637922061700130000"
+  }
+]

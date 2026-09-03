@@ -1,0 +1,67 @@
+[
+  {
+    "nombre": "Aceite de oliva extra virgen",
+    "precio": 5990,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/166900/000000000000650898-UN-01.jpg?v=639015182972800000"
+  },
+  {
+    "nombre": "Arroz Nuestra Cocina G1 grano largo ancho bolsa 1 Kg",
+    "precio": 1640,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/158134/Arroz-g1-grano-largo-ancho-bolsa.jpg?v=637871264542270000"
+  },
+  {
+    "nombre": "Arroz Nuestra Cocina G2 grano largo ancho bolsa 1 Kg",
+    "precio": 1250,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/158135/Arroz-g2-grano-largo-ancho-bolsa.jpg?v=637871264547430000"
+  },
+  {
+    "nombre": "Arroz Nuestra Cocina grado 1 integral 1 Kg",
+    "precio": 2010,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/155706/Arroz-grado.jpg?v=637865233459500000"
+  },
+  {
+    "nombre": "Azúcar granulada G2 bolsa",
+    "precio": 890,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/158137/Azucar-granulada-g2-bolsa.jpg?v=637871264560400000"
+  },
+  {
+    "nombre": "Cereal Chocapic Nestlé caja 350 g",
+    "precio": 3490,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/163718/000000000000650355-UN-01.jpg?v=638754999669300000"
+  },
+  {
+    "nombre": "Cereal chocolate original",
+    "precio": 570,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/168746/000000000000668127-UN-01.jpg?v=639185405813500000"
+  },
+  {
+    "nombre": "Cereal hojuelas de maiz caja",
+    "precio": 3620,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/158124/Cereal-corn-flakes-hojuelas-de-maiz.jpg?v=637871264479030000"
+  },
+  {
+    "nombre": "Cereal Mono Choc Costa 260 Gr",
+    "precio": 1930,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/158115/Cereal-mono-choc.jpg?v=637871264420700000"
+  },
+  {
+    "nombre": "Mostaza Heinz doypack 350 g",
+    "precio": 1840,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/158130/Mostaza-doypack.jpg?v=637871264517030000"
+  },
+  {
+    "nombre": "Té ceylan premium sustentable",
+    "precio": 4190,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/158138/Te-ceylan-premium-sustentable.jpg?v=637871264566370000"
+  },
+  {
+    "nombre": "Té surtido 6 sabores",
+    "precio": 4900,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/158116/Te-surtido-6-sabores.jpg?v=637871264429300000"
+  },
+  {
+    "nombre": "Té verde surtido",
+    "precio": 4620,
+    "imagen": "https://alvicl.vtexassets.com/arquivos/ids/158120/Te-verde-surtido.jpg?v=637871264453830000"
+  }
+]
