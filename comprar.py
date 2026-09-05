@@ -143,17 +143,24 @@ st.markdown(f"""
         flex: 1 1 0 !important;
     }}
     div[data-testid="stColumn"] div[data-testid="stNumberInput"] input {{
-        padding: 0.15rem 0.1rem;
-        font-size: 0.75rem;
-        min-height: 0;
+        padding: 0.1rem 0.05rem !important;
+        font-size: 0.7rem !important;
+        min-height: 1.6rem !important;
+        text-align: center;
     }}
     div[data-testid="stColumn"] div[data-testid="stNumberInput"] button {{
         display: none;
     }}
     div[data-testid="stColumn"] button {{
-        padding: 0.25rem 0.2rem !important;
-        font-size: 0.85rem !important;
-        min-height: 0 !important;
+        padding: 0.1rem !important;
+        font-size: 0.6rem !important;
+        min-height: 1.6rem !important;
+        height: 1.6rem !important;
+        line-height: 1 !important;
+    }}
+    div[data-testid="stColumn"] button p {{
+        font-size: 0.7rem !important;
+        margin: 0 !important;
     }}
     
     
@@ -303,7 +310,7 @@ st.markdown(f"""
         .marca h1 {{ font-size: 1.3rem; }}
         .nombre-producto {{ font-size: 0.72rem; }}
         .precio {{ font-size: 0.72rem; }}
-        div[data-testid="stColumn"] button {{ font-size: 0.75rem !important; }}
+        div[data-testid="stColumn"] button p {{ font-size: 0.65rem !important; }}
         details.carrito-flotante > summary {{ padding: 0.5rem 0.6rem; }}
         .carrito-body {{ padding: 0 0.6rem 0.6rem; }}
         .carrito-header h3 {{ font-size: 0.8rem; }}
@@ -468,8 +475,11 @@ productos_pagina = productos_filtrados[inicio:fin]
 # Tabla de productos
 st.markdown('<div class="table-container"><div class="table-scroll">', unsafe_allow_html=True)
 
+# Proporciones de columnas: el nombre del producto ocupa ~80% del ancho de la fila.
+COL_RATIOS = [0.2, 10.5, 1.2, 0.75, 0.55]
+
 # Encabezados de tabla
-cols = st.columns([0.4, 3.2, 1.1, 1, 1.1])
+cols = st.columns(COL_RATIOS)
 with cols[0]:
     st.markdown('<span class="header-celda">N°</span>', unsafe_allow_html=True)
 with cols[1]:
@@ -484,7 +494,7 @@ st.markdown(f'<hr style="margin:0.2rem 0 0.4rem;border:none;border-top:2px solid
 
 for offset, p in enumerate(productos_pagina):
     idx = inicio + offset + 1
-    cols = st.columns([0.4, 3.2, 1.1, 1, 1.1])
+    cols = st.columns(COL_RATIOS)
     with cols[0]:
         st.markdown(f'<span class="numero">{idx}</span>', unsafe_allow_html=True)
     with cols[1]:
