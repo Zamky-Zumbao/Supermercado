@@ -137,15 +137,36 @@ st.markdown(f"""
         align-items: center !important;
         gap: 0.3rem !important;
     }}
-    /* IMPORTANTE: no tocar 'flex-grow' aquí. Streamlit ya asigna el
-       ancho proporcional de cada columna vía flex-grow según los pesos
-       que le pasamos en st.columns([...]); si lo sobreescribimos con un
-       flex-grow igual para todas, las columnas quedan del mismo ancho
-       (que es justo lo que rompía el diseño). Solo permitimos encoger. */
     div[data-testid="stHorizontalBlock"] > div[data-testid="stColumn"],
     div[data-testid="stHorizontalBlock"] > div[data-testid="column"] {{
         min-width: 0 !important;
-        flex-shrink: 1 !important;
+    }}
+
+    /* === ANCHOS FIJOS PARA LAS FILAS DE PRODUCTOS ===
+       N°, Precio, Cantidad y el botón necesitan un ancho mínimo fijo en
+       píxeles para mostrarse SIEMPRE completos (p.ej. "$10.990"),
+       sin importar el ancho de la pantalla. "Producto" se queda con
+       todo el espacio restante. Se aplica solo a las filas de productos
+       (contenedores con key "prow_...") para no afectar otras columnas
+       de la app, como los botones de paginación. */
+    div[class*="st-key-prow_"] div[data-testid="stColumn"]:nth-child(1) {{
+        flex: 0 0 22px !important;
+        max-width: 22px !important;
+    }}
+    div[class*="st-key-prow_"] div[data-testid="stColumn"]:nth-child(2) {{
+        flex: 1 1 auto !important;
+    }}
+    div[class*="st-key-prow_"] div[data-testid="stColumn"]:nth-child(3) {{
+        flex: 0 0 76px !important;
+        max-width: 76px !important;
+    }}
+    div[class*="st-key-prow_"] div[data-testid="stColumn"]:nth-child(4) {{
+        flex: 0 0 86px !important;
+        max-width: 86px !important;
+    }}
+    div[class*="st-key-prow_"] div[data-testid="stColumn"]:nth-child(5) {{
+        flex: 0 0 42px !important;
+        max-width: 42px !important;
     }}
     div[data-testid="stColumn"] div[data-testid="stNumberInput"] input {{
         padding: 0.1rem 0.05rem !important;
@@ -153,12 +174,18 @@ st.markdown(f"""
         min-height: 1.6rem !important;
         text-align: center;
     }}
+    /* Botones +/- del campo de cantidad: compactos pero VISIBLES, para
+       que se pueda ajustar la cantidad ahí mismo sin tocar el carrito. */
     div[data-testid="stColumn"] div[data-testid="stNumberInput"] button {{
-        display: none;
+        width: 1.1rem !important;
+        min-width: 1.1rem !important;
+        height: 1.6rem !important;
+        min-height: 1.6rem !important;
+        padding: 0 !important;
     }}
     div[data-testid="stColumn"] button {{
         padding: 0.1rem !important;
-        font-size: 0.6rem !important;
+        font-size: 0.75rem !important;
         min-height: 1.6rem !important;
         height: 1.6rem !important;
         line-height: 1 !important;
@@ -316,6 +343,18 @@ st.markdown(f"""
         .nombre-producto {{ font-size: 0.72rem; }}
         .precio {{ font-size: 0.72rem; }}
         div[data-testid="stColumn"] button p {{ font-size: 0.65rem !important; }}
+        div[class*="st-key-prow_"] div[data-testid="stColumn"]:nth-child(3) {{
+            flex: 0 0 66px !important;
+            max-width: 66px !important;
+        }}
+        div[class*="st-key-prow_"] div[data-testid="stColumn"]:nth-child(4) {{
+            flex: 0 0 76px !important;
+            max-width: 76px !important;
+        }}
+        div[class*="st-key-prow_"] div[data-testid="stColumn"]:nth-child(5) {{
+            flex: 0 0 36px !important;
+            max-width: 36px !important;
+        }}
         details.carrito-flotante > summary {{ padding: 0.5rem 0.6rem; }}
         .carrito-body {{ padding: 0 0.6rem 0.6rem; }}
         .carrito-header h3 {{ font-size: 0.8rem; }}
@@ -480,47 +519,56 @@ productos_pagina = productos_filtrados[inicio:fin]
 # Tabla de productos
 st.markdown('<div class="table-container"><div class="table-scroll">', unsafe_allow_html=True)
 
-# Proporciones de columnas: el nombre del producto ocupa ~80% del ancho de la fila.
-COL_RATIOS = [0.2, 10.5, 1.2, 0.75, 0.55]
+# Proporciones base de columnas (el CSS de más abajo fija anchos exactos
+# para N°/Precio/Cantidad/Botón; "Producto" toma todo el espacio restante).
+COL_RATIOS = [0.2, 6, 1, 1, 0.8]
 
 # Encabezados de tabla
-cols = st.columns(COL_RATIOS)
-with cols[0]:
-    st.markdown('<span class="header-celda">N°</span>', unsafe_allow_html=True)
-with cols[1]:
-    st.markdown('<span class="header-celda">Producto</span>', unsafe_allow_html=True)
-with cols[2]:
-    st.markdown('<span class="header-celda" style="text-align:right;display:block;">Precio</span>', unsafe_allow_html=True)
-with cols[3]:
-    st.markdown('<span class="header-celda" style="text-align:center;display:block;">Cant.</span>', unsafe_allow_html=True)
-with cols[4]:
-    st.markdown('<span class="header-celda"></span>', unsafe_allow_html=True)
+with st.container(key="prow_header"):
+    cols = st.columns(COL_RATIOS)
+    with cols[0]:
+        st.markdown('<span class="header-celda">N°</span>', unsafe_allow_html=True)
+    with cols[1]:
+        st.markdown('<span class="header-celda">Producto</span>', unsafe_allow_html=True)
+    with cols[2]:
+        st.markdown('<span class="header-celda" style="text-align:right;display:block;">Precio</span>', unsafe_allow_html=True)
+    with cols[3]:
+        st.markdown('<span class="header-celda" style="text-align:center;display:block;">Cant.</span>', unsafe_allow_html=True)
+    with cols[4]:
+        st.markdown('<span class="header-celda"></span>', unsafe_allow_html=True)
 st.markdown(f'<hr style="margin:0.2rem 0 0.4rem;border:none;border-top:2px solid {GREEN_DARK};">', unsafe_allow_html=True)
 
 for offset, p in enumerate(productos_pagina):
     idx = inicio + offset + 1
-    cols = st.columns(COL_RATIOS)
-    with cols[0]:
-        st.markdown(f'<span class="numero">{idx}</span>', unsafe_allow_html=True)
-    with cols[1]:
-        st.markdown(f'<span class="nombre-producto">{p.get("nombre", "")}</span>', unsafe_allow_html=True)
-    with cols[2]:
-        precio = p.get('precio', 0)
-        st.markdown(f'<span class="precio">${precio:,.0f}</span>', unsafe_allow_html=True)
-    with cols[3]:
-        cant = st.number_input("", min_value=1, max_value=99, value=1, key=f"cant_{idx}", label_visibility="collapsed")
-    with cols[4]:
-        if st.button("+", key=f"btn_{idx}", use_container_width=True):
-            existente = next((item for item in st.session_state.carrito if item['nombre'] == p.get('nombre')), None)
-            if existente:
-                existente['cantidad'] += cant
-            else:
-                st.session_state.carrito.append({
-                    'nombre': p.get('nombre'),
-                    'precio': precio,
-                    'cantidad': cant
-                })
-            st.rerun()
+    with st.container(key=f"prow_{idx}"):
+        cols = st.columns(COL_RATIOS)
+        with cols[0]:
+            st.markdown(f'<span class="numero">{idx}</span>', unsafe_allow_html=True)
+        with cols[1]:
+            st.markdown(f'<span class="nombre-producto">{p.get("nombre", "")}</span>', unsafe_allow_html=True)
+        with cols[2]:
+            precio = p.get('precio', 0)
+            st.markdown(f'<span class="precio">${precio:,.0f}</span>', unsafe_allow_html=True)
+        with cols[3]:
+            # Con sus propios botones +/- el usuario puede ajustar la
+            # cantidad ANTES de agregar al carrito (antes estaban ocultos,
+            # lo que hacía parecer que la cantidad "no se movía").
+            cant = st.number_input("", min_value=1, max_value=99, value=1, key=f"cant_{idx}", label_visibility="collapsed")
+        with cols[4]:
+            # Ícono de carrito en vez de "+": así no se confunde con un
+            # contador de cantidad. Cada clic agrega la cantidad elegida
+            # arriba al carrito (acción explícita, no automática).
+            if st.button("🛒", key=f"btn_{idx}", use_container_width=True, help="Agregar al carrito"):
+                existente = next((item for item in st.session_state.carrito if item['nombre'] == p.get('nombre')), None)
+                if existente:
+                    existente['cantidad'] += cant
+                else:
+                    st.session_state.carrito.append({
+                        'nombre': p.get('nombre'),
+                        'precio': precio,
+                        'cantidad': cant
+                    })
+                st.rerun()
 
 st.markdown('</div></div>', unsafe_allow_html=True)
 
