@@ -51,21 +51,15 @@ st.markdown(f"""
         padding: 0 0.5rem 5rem;
     }}
     
-    /* Encabezado de marca - responsive */
+    /* Encabezado de marca - solo título */
     .marca {{
         background: {GREEN_DARK};
         color: white;
-        padding: 1rem 1rem 0.8rem;
+        padding: 0.9rem 1rem;
         border-radius: 10px 10px 0 0;
         border-bottom: 4px solid {MUSTARD};
         margin-bottom: 1rem;
-    }}
-    .marca-inner {{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 0.5rem;
+        text-align: center;
     }}
     .marca h1 {{
         font-size: 1.6rem;
@@ -73,43 +67,6 @@ st.markdown(f"""
         margin: 0;
         font-family: 'Georgia', serif;
         line-height: 1.2;
-    }}
-    .marca .kicker {{
-        font-size: 0.7rem;
-        opacity: 0.8;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-    }}
-    .marca .meta {{
-        font-size: 0.7rem;
-        opacity: 0.85;
-        text-align: right;
-        line-height: 1.3;
-    }}
-    
-    /* Stats - responsive */
-    .stats {{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
-        margin-bottom: 1rem;
-    }}
-    .stat-card {{
-        background: white;
-        padding: 0.5rem 0.8rem;
-        border-radius: 8px;
-        border-left: 3px solid {MUSTARD};
-        box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-        text-align: center;
-    }}
-    .stat-card .num {{
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: {GREEN_DARK};
-    }}
-    .stat-card .label {{
-        font-size: 0.65rem;
-        color: #666;
     }}
     
     /* Buscador - responsive */
@@ -139,31 +96,6 @@ st.markdown(f"""
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }}
-    table {{
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 0.8rem;
-        min-width: 600px;
-    }}
-    th {{
-        background: {GREEN_DARK};
-        color: white;
-        padding: 0.5rem 0.6rem;
-        text-align: left;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        font-weight: 600;
-        font-size: 0.7rem;
-        white-space: nowrap;
-    }}
-    td {{
-        padding: 0.4rem 0.6rem;
-        border-bottom: 1px solid #eee;
-        vertical-align: middle;
-    }}
-    tbody tr:nth-child(even) {{ background: #f8faf7; }}
-    tbody tr:hover {{ background: #eaf2ec; }}
     
     .precio {{
         font-weight: 700;
@@ -172,13 +104,21 @@ st.markdown(f"""
         white-space: nowrap;
         font-size: 0.8rem;
     }}
-    .producto-img {{
-        width: 32px;
-        height: 32px;
-        object-fit: contain;
-        border-radius: 4px;
-        background: #f0f2ee;
-        border: 1px solid #e0e0e0;
+    .producto-img {{ display: none; }}
+    .nombre-producto {{
+        font-size: 0.8rem;
+        line-height: 1.2;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }}
+    .header-celda {{
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: {GREEN_DARK};
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
     }}
     .numero {{
         color: #9AA394;
@@ -186,35 +126,36 @@ st.markdown(f"""
         white-space: nowrap;
     }}
     
-    /* Controles de cantidad - compactos */
-    .cantidad-input {{
-        width: 38px;
+    /* === FORZAR UNA SOLA FILA POR ARTÍCULO, TAMBIÉN EN MÓVIL ===
+       Por defecto, Streamlit apila las columnas verticalmente en pantallas
+       angostas. Esto rompe el diseño de "un producto = una fila". Las
+       reglas de abajo obligan a que las columnas se mantengan en línea
+       (row) y solo se encojan, sin apilarse, en cualquier ancho. */
+    div[data-testid="stHorizontalBlock"] {{
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        gap: 0.3rem !important;
+    }}
+    div[data-testid="stHorizontalBlock"] > div[data-testid="stColumn"],
+    div[data-testid="stHorizontalBlock"] > div[data-testid="column"] {{
+        min-width: 0 !important;
+        width: auto !important;
+        flex: 1 1 0 !important;
+    }}
+    div[data-testid="stColumn"] div[data-testid="stNumberInput"] input {{
         padding: 0.15rem 0.1rem;
-        border: 1.5px solid #ddd;
-        border-radius: 4px;
-        text-align: center;
         font-size: 0.75rem;
+        min-height: 0;
     }}
-    .btn-agregar {{
-        background: {MUSTARD};
-        color: {INK};
-        border: none;
-        padding: 0.2rem 0.5rem;
-        border-radius: 4px;
-        font-weight: 700;
-        font-size: 0.65rem;
-        cursor: pointer;
-        transition: background 0.15s;
-        white-space: nowrap;
+    div[data-testid="stColumn"] div[data-testid="stNumberInput"] button {{
+        display: none;
     }}
-    .btn-agregar:hover {{
-        background: #d49a2e;
+    div[data-testid="stColumn"] button {{
+        padding: 0.25rem 0.2rem !important;
+        font-size: 0.85rem !important;
+        min-height: 0 !important;
     }}
-    .btn-agregar.agregado {{
-        background: #e0e0e0;
-        color: #888;
-        cursor: default;
-    }}
+    
     
     /* Carrito flotante - colapsable, ocupa poco espacio por defecto */
     details.carrito-flotante {{
@@ -338,13 +279,6 @@ st.markdown(f"""
         color: white;
     }}
     
-    /* Checkbox más grande para móvil */
-    .checkbox {{
-        width: 18px;
-        height: 18px;
-        cursor: pointer;
-        accent-color: {GREEN};
-    }}
     
     /* Espaciado para que el carrito (cerrado) no tape el contenido */
     .spacer-bottom {{
@@ -367,16 +301,9 @@ st.markdown(f"""
     /* Mejoras para móvil muy pequeño */
     @media (max-width: 480px) {{
         .marca h1 {{ font-size: 1.3rem; }}
-        .marca .meta {{ font-size: 0.6rem; }}
-        .stats {{ grid-template-columns: repeat(2, 1fr); gap: 0.3rem; }}
-        .stat-card .num {{ font-size: 0.9rem; }}
-        .stat-card .label {{ font-size: 0.55rem; }}
-        table {{ font-size: 0.7rem; min-width: 500px; }}
-        th {{ font-size: 0.6rem; padding: 0.3rem 0.4rem; }}
-        td {{ padding: 0.3rem 0.4rem; }}
-        .producto-img {{ width: 28px; height: 28px; }}
-        .btn-agregar {{ font-size: 0.6rem; padding: 0.15rem 0.4rem; }}
-        .cantidad-input {{ width: 32px; font-size: 0.7rem; }}
+        .nombre-producto {{ font-size: 0.72rem; }}
+        .precio {{ font-size: 0.72rem; }}
+        div[data-testid="stColumn"] button {{ font-size: 0.75rem !important; }}
         details.carrito-flotante > summary {{ padding: 0.5rem 0.6rem; }}
         .carrito-body {{ padding: 0 0.6rem 0.6rem; }}
         .carrito-header h3 {{ font-size: 0.8rem; }}
@@ -402,15 +329,8 @@ st.markdown(f"""
         .spacer-bottom {{
             height: 0;
         }}
-        .stats {{
-            grid-template-columns: repeat(4, 1fr);
-        }}
-        table {{
-            font-size: 0.9rem;
-            min-width: auto;
-        }}
         .marca h1 {{ font-size: 2.2rem; }}
-        .marca {{ padding: 2rem 2rem 1.5rem; }}
+        .marca {{ padding: 1.4rem 2rem; }}
     }}
 </style>
 """, unsafe_allow_html=True)
@@ -511,30 +431,10 @@ if not st.session_state.productos:
 productos = st.session_state.productos
 
 # === INTERFAZ PRINCIPAL ===
-# Encabezado
+# Encabezado: solo el título "Compras"
 st.markdown(f"""
 <div class="marca">
-    <div class="marca-inner">
-        <div>
-            <div class="kicker">Cuadro de compras</div>
-            <h1>Alvi</h1>
-        </div>
-        <div class="meta">
-            {datetime.now().strftime('%d/%m/%Y %H:%M')}<br>
-            {len(productos)} productos
-        </div>
-    </div>
-</div>
-""", unsafe_allow_html=True)
-
-# Stats
-precios = [p.get('precio', 0) for p in productos if p.get('precio', 0) > 0]
-st.markdown(f"""
-<div class="stats">
-    <div class="stat-card"><div class="num">{len(productos)}</div><div class="label">Total</div></div>
-    <div class="stat-card"><div class="num">${min(precios) if precios else 0:,.0f}</div><div class="label">Más barato</div></div>
-    <div class="stat-card"><div class="num">${max(precios) if precios else 0:,.0f}</div><div class="label">Más caro</div></div>
-    <div class="stat-card"><div class="num">${sum(precios)//len(precios) if precios else 0:,.0f}</div><div class="label">Promedio</div></div>
+    <h1>Compras</h1>
 </div>
 """, unsafe_allow_html=True)
 
@@ -569,61 +469,43 @@ productos_pagina = productos_filtrados[inicio:fin]
 st.markdown('<div class="table-container"><div class="table-scroll">', unsafe_allow_html=True)
 
 # Encabezados de tabla
-cols = st.columns([0.3, 0.4, 0.6, 3.5, 1, 1.5])
+cols = st.columns([0.4, 3.2, 1.1, 1, 1.1])
 with cols[0]:
-    st.markdown('<span style="font-size:0.7rem;font-weight:600;color:white;">N°</span>', unsafe_allow_html=True)
+    st.markdown('<span class="header-celda">N°</span>', unsafe_allow_html=True)
 with cols[1]:
-    st.markdown('<span style="font-size:0.7rem;font-weight:600;color:white;">✓</span>', unsafe_allow_html=True)
+    st.markdown('<span class="header-celda">Producto</span>', unsafe_allow_html=True)
 with cols[2]:
-    st.markdown('<span style="font-size:0.7rem;font-weight:600;color:white;">Img</span>', unsafe_allow_html=True)
+    st.markdown('<span class="header-celda" style="text-align:right;display:block;">Precio</span>', unsafe_allow_html=True)
 with cols[3]:
-    st.markdown('<span style="font-size:0.7rem;font-weight:600;color:white;">Producto</span>', unsafe_allow_html=True)
+    st.markdown('<span class="header-celda" style="text-align:center;display:block;">Cant.</span>', unsafe_allow_html=True)
 with cols[4]:
-    st.markdown('<span style="font-size:0.7rem;font-weight:600;color:white;text-align:right;display:block;">Precio</span>', unsafe_allow_html=True)
-with cols[5]:
-    st.markdown('<span style="font-size:0.7rem;font-weight:600;color:white;text-align:center;display:block;">Acción</span>', unsafe_allow_html=True)
+    st.markdown('<span class="header-celda"></span>', unsafe_allow_html=True)
+st.markdown(f'<hr style="margin:0.2rem 0 0.4rem;border:none;border-top:2px solid {GREEN_DARK};">', unsafe_allow_html=True)
 
 for offset, p in enumerate(productos_pagina):
     idx = inicio + offset + 1
-    cols = st.columns([0.3, 0.4, 0.6, 3.5, 1, 1.5])
+    cols = st.columns([0.4, 3.2, 1.1, 1, 1.1])
     with cols[0]:
         st.markdown(f'<span class="numero">{idx}</span>', unsafe_allow_html=True)
     with cols[1]:
-        st.checkbox("", key=f"chk_{idx}", label_visibility="collapsed")
+        st.markdown(f'<span class="nombre-producto">{p.get("nombre", "")}</span>', unsafe_allow_html=True)
     with cols[2]:
-        imagen = p.get('imagen', '')
-        if imagen:
-            # <img loading="lazy"> deja que el navegador difiera la descarga
-            # de imágenes fuera de pantalla; st.image no soporta esto y es
-            # más pesado de renderizar en listas largas.
-            st.markdown(
-                f'<img src="{imagen}" loading="lazy" width="32" height="32" '
-                f'class="producto-img" onerror="this.style.display=\'none\'">',
-                unsafe_allow_html=True,
-            )
-        else:
-            st.markdown('<span style="color:#ccc;font-size:0.8rem;">📦</span>', unsafe_allow_html=True)
-    with cols[3]:
-        st.markdown(f'<span style="font-size:0.8rem;line-height:1.2;">{p.get("nombre", "")}</span>', unsafe_allow_html=True)
-    with cols[4]:
         precio = p.get('precio', 0)
         st.markdown(f'<span class="precio">${precio:,.0f}</span>', unsafe_allow_html=True)
-    with cols[5]:
-        col_cant, col_btn = st.columns([0.6, 1])
-        with col_cant:
-            cant = st.number_input("", min_value=1, max_value=99, value=1, key=f"cant_{idx}", label_visibility="collapsed")
-        with col_btn:
-            if st.button("Agregar", key=f"btn_{idx}", use_container_width=True):
-                existente = next((item for item in st.session_state.carrito if item['nombre'] == p.get('nombre')), None)
-                if existente:
-                    existente['cantidad'] += cant
-                else:
-                    st.session_state.carrito.append({
-                        'nombre': p.get('nombre'),
-                        'precio': precio,
-                        'cantidad': cant
-                    })
-                st.rerun()
+    with cols[3]:
+        cant = st.number_input("", min_value=1, max_value=99, value=1, key=f"cant_{idx}", label_visibility="collapsed")
+    with cols[4]:
+        if st.button("➕", key=f"btn_{idx}", use_container_width=True):
+            existente = next((item for item in st.session_state.carrito if item['nombre'] == p.get('nombre')), None)
+            if existente:
+                existente['cantidad'] += cant
+            else:
+                st.session_state.carrito.append({
+                    'nombre': p.get('nombre'),
+                    'precio': precio,
+                    'cantidad': cant
+                })
+            st.rerun()
 
 st.markdown('</div></div>', unsafe_allow_html=True)
 
