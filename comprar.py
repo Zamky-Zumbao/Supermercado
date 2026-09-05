@@ -133,14 +133,19 @@ st.markdown(f"""
        (row) y solo se encojan, sin apilarse, en cualquier ancho. */
     div[data-testid="stHorizontalBlock"] {{
         flex-wrap: nowrap !important;
+        flex-direction: row !important;
         align-items: center !important;
         gap: 0.3rem !important;
     }}
+    /* IMPORTANTE: no tocar 'flex-grow' aquí. Streamlit ya asigna el
+       ancho proporcional de cada columna vía flex-grow según los pesos
+       que le pasamos en st.columns([...]); si lo sobreescribimos con un
+       flex-grow igual para todas, las columnas quedan del mismo ancho
+       (que es justo lo que rompía el diseño). Solo permitimos encoger. */
     div[data-testid="stHorizontalBlock"] > div[data-testid="stColumn"],
     div[data-testid="stHorizontalBlock"] > div[data-testid="column"] {{
         min-width: 0 !important;
-        width: auto !important;
-        flex: 1 1 0 !important;
+        flex-shrink: 1 !important;
     }}
     div[data-testid="stColumn"] div[data-testid="stNumberInput"] input {{
         padding: 0.1rem 0.05rem !important;
@@ -505,7 +510,7 @@ for offset, p in enumerate(productos_pagina):
     with cols[3]:
         cant = st.number_input("", min_value=1, max_value=99, value=1, key=f"cant_{idx}", label_visibility="collapsed")
     with cols[4]:
-        if st.button("➕", key=f"btn_{idx}", use_container_width=True):
+        if st.button("+", key=f"btn_{idx}", use_container_width=True):
             existente = next((item for item in st.session_state.carrito if item['nombre'] == p.get('nombre')), None)
             if existente:
                 existente['cantidad'] += cant
